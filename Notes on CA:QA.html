@@ -1,0 +1,51 @@
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<html>
+    <head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <title>Notes on CA:QA</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="content">
+        
+<h1 id="toc_1">5th GPU部分读书笔记</h1>
+
+<p>
+SIMD的优势：
+</p>
+<ol>
+<li>
+Protential Speedup非常高
+
+<li>
+对于程序员来说只需要按照sequential的方式思考，通过SIMD的程序编写即可实现并行
+
+<li>
+SIMD宽度每4年翻一倍，SIMD是MIMD的两倍
+
+</ol>
+
+<p>
+本章主要讨论Vector Architecture和GPU
+</p>
+
+<h2 id="toc_1.1">4.2 Vector Architecture</h2>
+<p>
+vector architecture，将内存中分离的数据元素取出来，放到一个很大的顺序寄存器file中，对其进行操作，然后将其结果分发到内存中去。因此一个单独的指令可能造成很多的register-register操作
+</p>
+
+<p>
+这些register file可以起到隐藏memory latency和增加memory bandwidth的作用。一句话说就是，vector能使memory一直busy
+</p>
+
+<p>
+<img src="images/Architecture/001_vector.png" alt="Vector Architecture" />
+</p>
+
+        </div>
+    </body>
+</html>
+
