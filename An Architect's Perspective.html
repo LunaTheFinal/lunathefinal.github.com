@@ -1,0 +1,33 @@
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<html>
+    <head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <title>An Architect's Perspective</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="content">
+        
+<h1 id="toc_1">An Architect's Perspective</h1>
+
+<ul>
+<li>
+采用Rasterization和Ray
+  Tracing相结合的方式，Rasterization做出一个一半的Frame，用来进行heuristic的进行估计每一个像素的采样数量。但是问题在于有些像素虽然可能投射的多边形不多，但需要反射很多多边形，这也是需要考虑的问题。不过Rasterization和Ray
+  Tracing 相结合的办法应该有一定参考意义。
+
+</ul>
+
+<ul>
+<li>
+对于光线行进距离进行启发式的减少Sampling数量越远的物体需要的采样数量越少
+
+</ul>
+
+        </div>
+    </body>
+</html>
+
